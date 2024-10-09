@@ -1,0 +1,41 @@
+code for the home page
+import { Text, StyleSheet, View, Pressable } from 'react-native'
+
+import { Button } from 'react-native'
+import { Link,useNavigation } from 'expo-router';
+
+
+export default function index () {
+  const navigation = useNavigation();
+
+  
+ 
+    return (
+      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <Text style={styles.text}>Welcome to Chef Chrisfels Menu app</Text>
+        <Link href="/menu"> 
+          <Pressable >
+           <Text style={styles.link}> Go to Menu</Text>
+            
+          </Pressable>  
+        </Link>     
+      </View>
+    )
+  
+}
+
+const styles = StyleSheet.create({
+
+  text: {
+    fontSize: 28,
+    lineHeight: 32,
+    marginTop: -6,
+  },
+
+  link: {
+    lineHeight: 30,
+    fontSize: 16,
+    color: '#0a7ea4',
+  },
+
+})
